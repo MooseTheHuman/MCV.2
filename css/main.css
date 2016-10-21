@@ -1,4 +1,5 @@
-@import url(https://fonts.googleapis.com/css?family=Audiowide);
+@import url(https://fonts.googleapis.com/css?family=Audiowide|Aldrich);
+
 html {
     box-sizing: border-box;
     font-family: Helvetica Neue, Arial, sans-serif;
@@ -95,11 +96,11 @@ header label {
     color: white;
     cursor: pointer;
     display: inline-block;
-    line-height: 4.5em;
-    font-size: .75em;
+    line-height: 3.6em;
+    font-size: .9em;
     font-weight: bold;
-    padding: 0 1em;
-    font-family: 'Audiowide';
+    padding: .2em 1em 0 1em;
+    font-family: 'Aldrich';
 }
 
 #logo img {
@@ -108,16 +109,16 @@ header label {
     height: 3em;
     width: auto;
     left: .25em;
-    top: .25em;
+    top: .2em;
 }
 
 #myname {
     display: inline-block;
     position: fixed;
     left: 4em;
-    top: .25em;
+    top: -.2em;
     color: white;
-    font-family: helvetica;
+    font-family: 'Aldrich', sans-serif;
 }
 
 #labels {
@@ -136,7 +137,7 @@ header label:hover {
 /* Button effect - credit to David Conner's "Collection of Button Hover Effects"*/
 
 header label {
-/*    border: 1px solid;*/
+    /*    border: 1px solid;*/
     overflow: hidden;
     position: relative;
 }
@@ -261,6 +262,7 @@ header label:hover:after {
     -webkit-transition: all .5s .5s;
     transition: all .5s .5s;
 }
+
 
 /* FOOTER */
 
