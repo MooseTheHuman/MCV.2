@@ -1,5 +1,4 @@
 @import url(https://fonts.googleapis.com/css?family=Audiowide|Aldrich);
-
 html {
     box-sizing: border-box;
     font-family: Helvetica Neue, Arial, sans-serif;
@@ -42,10 +41,71 @@ body {
     height: 100%;
     width: 100%;
     position: relative;
-    overflow: hidden;
+    overflow: scroll;
     background: #120103;
     color: #fff;
     text-align: center;
+}
+
+
+/* Accordion */
+
+.accordion .header {
+    background: url(../images/faux-footer-bg.png);
+    color: #fff;
+    display: block;
+    font-weight: bold;
+    padding: 0.5em 0.25em;
+    -webkit-transition: all 0.55s;
+    transition: all 0.55s;
+    width: 100%;
+    margin: 0 auto .5em auto;
+    width: 80%;
+    border-radius: 5px;
+}
+
+.accordion .header:hover {
+    background: rgba(124, 252, 0, .58);
+}
+
+.accordion .header label {
+    cursor: pointer;
+}
+
+.accordion .body {
+    color: #fff;
+    font-size: 14px;
+    border-top: none;
+}
+
+.accordion .body a {
+    text-decoration: none;
+}
+
+.accordion input[type='radio'],
+.accordion div.body {
+    display: none;
+}
+
+.accordion input[type='radio']:checked {
+    position: absolute;
+    left: -999999px;
+}
+
+.accordion input[type='radio']:checked + div.body {
+    display: inline-block;
+}
+
+@media (min-width: 50em) {
+    .accordion .header {
+        font-size: 1.25em;
+    }
+}
+
+@media (min-width: 50em) {
+    .accordion .body {
+        font-size: 1em;
+    }
 }
 
 
