@@ -1,3 +1,5 @@
+/***** HTML *****/
+
 @import url(https://fonts.googleapis.com/css?family=Audiowide|Aldrich);
 html {
     box-sizing: border-box;
@@ -17,9 +19,9 @@ h1 {
     color: #fff;
     font-family: "Audiowide", cursive;
     font-size: 2em;
-    font-size: 6vw;
+    font-size: 5vw;
     line-height: 1.2;
-    margin: 0.75em 0 .75em;
+    margin: 0.5em 0 .5em;
     text-shadow: 1px 1px 1px #333;
 }
 
@@ -38,17 +40,17 @@ body {
 }
 
 .wrap {
-    height: 100%;
+    min-height: 100%;
     width: 100%;
     position: relative;
-    overflow: scroll;
+    overflow-x: hidden;
     background: #120103;
     color: #fff;
     text-align: center;
 }
 
 
-/* Accordion */
+/***** Accordion *****/
 
 .accordion .header {
     background: url(../images/faux-footer-bg.png);
@@ -57,10 +59,9 @@ body {
     font-weight: bold;
     padding: 0.5em 0.25em;
     -webkit-transition: all 0.55s;
-    transition: all 0.55s;
+    transition: all .55s;
     width: 100%;
     margin: 0 auto .5em auto;
-    width: 80%;
     border-radius: 5px;
     cursor: pointer;
 }
@@ -93,6 +94,8 @@ body {
     display: inline-block;
 }
 
+
+
 @media (min-width: 50em) {
     .accordion .header {
         font-size: 1.25em;
@@ -105,39 +108,10 @@ body {
     }
 }
 
-
-/* Summary */
-
-details summary::-webkit-details-marker {
-    display: none;
+.accordion {
+    margin-bottom: 3em;
 }
-
-summary {
-    background: url(../images/faux-footer-bg.png);
-    color: #fff;
-    display: block;
-    font-weight: bold;
-    padding: 0.5em 0.25em;
-    -webkit-transition: all 0.55s;
-    transition: all 0.55s;
-    width: 100%;
-    margin: 0 auto .5em auto;
-    width: 80%;
-    border-radius: 5px;
-}
-
-summary:hover {
-    background: rgba(124, 252, 0, .58);
-}
-
-@media (min-width: 50em) {
-    summary {
-        font-size: 1.25em;
-    }
-}
-
-
-/* HEADER */
+/***** HEADER *****/
 
 header {
     background: url(../images/faux-footer-bg.png);
@@ -147,6 +121,7 @@ header {
     z-index: 900;
     width: 100%;
     height: 3.4em;
+    box-shadow: 0px 1px 6px 2px black;
 }
 
 header label {
@@ -191,7 +166,7 @@ header label:hover {
 }
 
 
-/* Button effect - credit to David Conner's "Collection of Button Hover Effects"*/
+/***** Button effect - credit to David Conner's "Collection of Button Hover Effects"*****/
 
 header label {
     /*    border: 1px solid;*/
@@ -226,7 +201,7 @@ header label:hover:after {
 }
 
 
-/* Slides */
+/***** Slides *****/
 
 .slide {
     height: 100%;
@@ -243,29 +218,32 @@ header label:hover:after {
     transition: left 0s .75s;
 }
 
+input {
+    visibility: hidden;
+}
+
 .slide-zero {
-    background-image: url(../images/mountains.jpg);
-    transition: none;
+    background-image: url(../images/moosepoly.png);
 }
 
 .slide-one {
-    background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/65463/starryFarm.jpg");
+    background-image: url(../images/forest.jpg);
 }
 
 .slide-two {
-    background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/65463/campusDarkDays.jpg");
+    background-image: url(../images/forest2.jpg);
 }
 
 .slide-three {
-    background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/65463/autumn.jpg");
+    background-image: url(../images/forest3.jpg);
 }
 
 .slide-four {
-    background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/65463/lakehouse.jpg");
+    background-image: url(../images/forest4.jpg);
 }
 
 .slide-five {
-    background-image: url(../images/background.jpg);
+    background-image: url(../images/forest5.jpg);
 }
 
 .slide h1,
@@ -320,8 +298,30 @@ header label:hover:after {
     transition: all .5s .5s;
 }
 
+/***** Header clickers *****/
 
-/* FOOTER */
+.header h3 {
+    font-size: 2.5vh;
+}
+.body p,
+.body li,
+.body h3{
+    font-size: 2vh;
+}
+
+.body {
+    text-align: left;
+}
+
+/***** Contact *****/
+
+.contact img {
+    height: 100%;
+    padding-bottom: 3em;
+    padding-top: .4em;
+}
+
+/***** Footer *****/
 
 #footer {
     position: fixed;
@@ -341,7 +341,7 @@ header label:hover:after {
 }
 
 
-/*	Social */
+/*****	Social *****/
 
 #social {
     margin-bottom: .8em;
@@ -365,14 +365,16 @@ header label:hover:after {
 }
 
 
-/* MEDIA QUERIES */
+/***** MEDIA QUERIES *****/
 
 
 /* Made the dumb mobile view boxes fit 100% width somehow */
 
 
+/*@media only screen and (max-height: 450px) {*/
+
+
 /*
-@media only screen and (max-width: 450px) {
     #primary {
         width: 100%;
     }
@@ -420,19 +422,12 @@ header label:hover:after {
         font-size: 12px;
     }
 }
+*/
 
-@media only screen and (min-width: 451px) and (max-width: 550px) {
-  
-}
+@media only screen and (min-width: 451px) and (max-width: 550px) {}
 
-@media only screen and (min-width: 551px) and (max-width: 650px) {
-  
-}
+@media only screen and (min-width: 551px) and (max-width: 650px) {}
 
-@media only screen and (min-width: 651px) and (max-width: 800px) {
- 
-}
+@media only screen and (min-width: 651px) and (max-width: 800px) {}
 
-@media only screen and (min-width: 801px) and (max-width: 2000px) {
-  
-}*/
+@media only screen and (min-width: 801px) and (max-width: 2000px) {}
