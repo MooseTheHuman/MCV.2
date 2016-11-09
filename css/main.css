@@ -1,6 +1,6 @@
 /***** HTML *****/
 
-@import url(https://fonts.googleapis.com/css?family=Audiowide|Aldrich);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700|Aldrich);
 html {
     box-sizing: border-box;
     font-family: Helvetica Neue, Arial, sans-serif;
@@ -17,7 +17,7 @@ html {
 
 h1 {
     color: #fff;
-    font-family: "Audiowide", cursive;
+    font-family: 'Open Sans Condensed', sans-serif;
     font-size: 2em;
     font-size: 5vw;
     line-height: 1.2;
@@ -53,7 +53,7 @@ body {
 /***** Accordion *****/
 
 .accordion .header {
-    background: url(../images/faux-footer-bg.png);
+    background-color: rgba(0,0,0,.8);
     color: #fff;
     display: block;
     font-weight: bold;
@@ -94,8 +94,6 @@ body {
     display: inline-block;
 }
 
-
-
 @media (min-width: 50em) {
     .accordion .header {
         font-size: 1.25em;
@@ -110,6 +108,14 @@ body {
 
 .accordion {
     margin-bottom: 3em;
+}
+
+.body {
+    background-color: rgba(25,25,25,.8);
+    padding: 0 2em;
+    min-width: 80%;
+    margin-bottom: .7em;
+    border-radius: 5px;
 }
 /***** HEADER *****/
 
@@ -132,7 +138,7 @@ header label {
     font-size: .9em;
     font-weight: bold;
     padding: .2em 1em 0 1em;
-    font-family: 'Aldrich';
+    font-family: 'Aldrich', sans-serif;
 }
 
 #logo img {
@@ -151,6 +157,12 @@ header label {
     top: -.2em;
     color: white;
     font-family: 'Aldrich', sans-serif;
+}
+
+#myname a,
+#myname a:visited {
+    text-decoration: none;
+    color: white;
 }
 
 #labels {
@@ -263,7 +275,7 @@ input {
     left: 0;
     z-index: 100;
     -webkit-transition: left .65s ease-out;
-    transition: left .65s ease-out;
+    transition: left .75s ease-out;
 }
 
 [id^="slide"]:checked + .slide h1 {
@@ -298,14 +310,16 @@ input {
     transition: all .5s .5s;
 }
 
+
 /***** Header clickers *****/
 
 .header h3 {
     font-size: 2.5vh;
 }
+
 .body p,
 .body li,
-.body h3{
+.body h3 {
     font-size: 2vh;
 }
 
@@ -313,12 +327,31 @@ input {
     text-align: left;
 }
 
+
 /***** Contact *****/
 
-.contact img {
-    height: 100%;
-    padding-bottom: 3em;
-    padding-top: .4em;
+.slide-five .header {
+    background-color: rgba(0,0,0,.8);
+    color: #fff;
+    display: block;
+    font-weight: bold;
+    padding: 0.5em 0.25em;
+    -webkit-transition: all 0.55s;
+    transition: all .55s;
+    margin: 0 auto .5em auto;
+    border-radius: 5px;
+    width: 25em;
+}
+
+.slide-five a,
+.slide-five a:visited {
+    color: white;
+    text-decoration: none;
+}
+
+.slide-five .header:hover {
+    background-color: rgba(50,50,50,.9);
+    box-shadow: 
 }
 
 /***** Footer *****/
